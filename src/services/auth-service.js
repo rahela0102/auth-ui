@@ -8,7 +8,7 @@ class AuthService {
     const match = registeredUsers.find(user => user.email === data.email);
 
     if (match) {
-      throw new Error('this email is already taken');
+      throw new Error('This email is already taken');
     }
 
     registeredUsers.push(data);
@@ -25,7 +25,7 @@ class AuthService {
     );
 
     if (!match) {
-      throw new Error('incorrect credentials');
+      throw new Error('Incorrect credentials');
     }
 
     localStorage.setItem(AUTH_USER_KEY, JSON.stringify(match));

@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import('../../components/login-form/login-form.js');
 
 class LoginPage extends LitElement {
   static styles = [
@@ -11,7 +12,7 @@ class LoginPage extends LitElement {
 
   render() {
     return html` <h1>Login</h1>
-      <p>This is login.</p>`;
+      <login-form></login-form>`;
   }
 }
 customElements.define('login-page', LoginPage);

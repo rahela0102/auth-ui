@@ -17,7 +17,7 @@ class AuthService {
     localStorage.setItem(AUTH_USER_KEY, JSON.stringify(data));
   }
 
-  static login(data) {
+  login(data) {
     const registeredUsers = this.getUserList();
 
     const match = registeredUsers.find(
@@ -28,7 +28,7 @@ class AuthService {
       throw new Error('incorrect credentials');
     }
 
-    localStorage.setItem(AUTH_USER_KEY, JSON.stringify(data));
+    localStorage.setItem(AUTH_USER_KEY, JSON.stringify(match));
   }
 
   logout() {

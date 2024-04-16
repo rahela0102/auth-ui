@@ -1,19 +1,14 @@
 import { Router } from '@vaadin/router';
-import { LitElement, html, css } from 'lit';
+import { LitElement, html } from 'lit';
 import { authService } from '../../services/auth-service.js';
+import { styles } from './styles.js';
 
 class UserDetailsPage extends LitElement {
   static properties = {
     __authUser: { type: Object },
   };
 
-  static styles = [
-    css`
-      :host {
-        display: block;
-      }
-    `,
-  ];
+  static styles = [styles];
 
   constructor() {
     super();
@@ -31,9 +26,22 @@ class UserDetailsPage extends LitElement {
 
   render() {
     return html`
-      <h1>User details</h1>
-      <p>${this.__authUser.firstName}</p>
-      <action-button @click=${this.__logout}>Logout</action-button>
+      <div class="container">
+        <h1>User details</h1>
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-content">
+              <p>First Name:<span>${this.__authUser.firstName}</span></p>
+              <p>Last Name: <span>${this.__authUser.lastName}</span></p>
+              <p>Email: <span>${this.__authUser.email}</span></p>
+            </div>
+            <action-button @click=${this.__logout}>Logout</action-button>
+          </div>
+          <div class="image-container">
+            <img src="../../../assets/images/profile.webp" alt="profile-img" />
+          </div>
+        </div>
+      </div>
     `;
   }
 }

@@ -1,14 +1,9 @@
 import { LionInput } from '@lion/ui/input.js';
-import { css } from 'lit';
+import { inputStyles } from '../styles/input-styles.js';
 
 class InputText extends LionInput {
   static get styles() {
-    return [
-      ...super.styles,
-      css`
-        /* your styles here */
-      `,
-    ];
+    return [...super.styles, inputStyles];
   }
 }
 

@@ -1,14 +1,9 @@
 import { LionButton } from '@lion/ui/button.js';
-import { css } from 'lit';
+import { buttonStyles } from '../styles/button-styles.js';
 
 class ActionButton extends LionButton {
   static get styles() {
-    return [
-      ...super.styles,
-      css`
-        /* your styles here */
-      `,
-    ];
+    return [...super.styles, buttonStyles];
   }
 }
 

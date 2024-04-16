@@ -1,14 +1,9 @@
 import { LionButtonSubmit } from '@lion/ui/button.js';
-import { css } from 'lit';
+import { buttonStyles } from '../styles/button-styles.js';
 
 class SubmitButton extends LionButtonSubmit {
   static get styles() {
-    return [
-      ...super.styles,
-      css`
-        /* your styles here */
-      `,
-    ];
+    return [...super.styles, buttonStyles];
   }
 }
 customElements.define('submit-button', SubmitButton);

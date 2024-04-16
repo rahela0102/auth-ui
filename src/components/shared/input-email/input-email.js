@@ -1,14 +1,9 @@
 import { LionInputEmail } from '@lion/ui/input-email.js';
-import { css } from 'lit';
+import { inputStyles } from '../styles/input-styles.js';
 
 class InputEmail extends LionInputEmail {
   static get styles() {
-    return [
-      ...super.styles,
-      css`
-        /* your styles here */
-      `,
-    ];
+    return [...super.styles, inputStyles];
   }
 }
 

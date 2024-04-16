@@ -22,6 +22,7 @@ class RegisterForm extends LitElement {
     if (ev.target.hasFeedbackFor?.includes('error')) {
       return;
     }
+
     try {
       authService.register(ev.target.serializedValue);
       Router.go('/user-details');

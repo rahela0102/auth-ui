@@ -1,6 +1,6 @@
 # Overview
 
-Basic authentication system made using [Lit](https://lit.dev/), and [Lion](https://lion-web.netlify.app/). The project was generated using [Open Web Components](https://open-wc.org/docs/development/generator/).
+Basic authentication system made using [Lit](https://lit.dev/), and [Lion](https://lion-web.netlify.app/). The project was generated using [Open Web Components](https://open-wc.org/docs/development/generator/). The routing was made using [Vaadin router](https://github.com/vaadin/router).
 
 # Features
 

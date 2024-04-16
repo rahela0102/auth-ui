@@ -15,9 +15,16 @@
   },
   "dependencies": {
     "@lion/ui": "^0.6.1",
+    "@vaadin/router": "^1.7.5",
     "lit": "^2.0.2"
   },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-syntax-import-assertions"
+    ]
+  },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^9.2.1",
     "@open-wc/testing": "^3.1.6",

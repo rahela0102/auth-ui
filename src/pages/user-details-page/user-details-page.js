@@ -1,6 +1,6 @@
 import { Router } from '@vaadin/router';
 import { LitElement, html, css } from 'lit';
-import { authService } from '../../services/auth-service';
+import { authService } from '../../services/auth-service.js';
 
 class UserDetailsPage extends LitElement {
   static properties = {

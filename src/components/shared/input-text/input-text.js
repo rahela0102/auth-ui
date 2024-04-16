@@ -1,7 +1,7 @@
-import { LionButton } from '@lion/ui/button.js';
+import { LionInput } from '@lion/ui/input.js';
 import { css } from 'lit';
 
-class ButtonComponent extends LionButton {
+class InputText extends LionInput {
   static get styles() {
     return [
       ...super.styles,
@@ -11,4 +11,5 @@ class ButtonComponent extends LionButton {
     ];
   }
 }
-customElements.define('button-component', ButtonComponent);
+
+customElements.define('input-text', InputText);

@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import '../../components/register-form/register-form.js';
 
 class RegisterPage extends LitElement {
   static styles = [
@@ -12,7 +13,7 @@ class RegisterPage extends LitElement {
   render() {
     return html`
       <h1>Register</h1>
-      <p>This is register.</p>
+      <register-form></register-form>
       <a href="/login">login</a>
     `;
   }

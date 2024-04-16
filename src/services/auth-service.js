@@ -13,7 +13,7 @@ class AuthService {
 
     registeredUsers.push(data);
 
-    localStorage.setItem(USERS_KEY, JSON.stringify(data));
+    localStorage.setItem(USERS_KEY, JSON.stringify(registeredUsers));
     localStorage.setItem(AUTH_USER_KEY, JSON.stringify(data));
   }
 
@@ -35,8 +35,9 @@ class AuthService {
     localStorage.removeItem(AUTH_USER_KEY);
   }
 
-  static getUserList() {
+  getUserList() {
     const registeredUsers = JSON.parse(localStorage.getItem(USERS_KEY));
+    console.log(registeredUsers);
 
     return registeredUsers ?? [];
   }

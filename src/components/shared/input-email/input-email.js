@@ -1,7 +1,7 @@
-import { LionInput } from '@lion/ui/input.js';
+import { LionInputEmail } from '@lion/ui/input-email.js';
 import { css } from 'lit';
 
-class InputComponent extends LionInput {
+class InputEmail extends LionInputEmail {
   static get styles() {
     return [
       ...super.styles,
@@ -12,4 +12,4 @@ class InputComponent extends LionInput {
   }
 }
 
-customElements.define('input-component', InputComponent);
+customElements.define('input-email', InputEmail);

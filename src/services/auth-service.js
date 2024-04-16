@@ -31,15 +31,18 @@ class AuthService {
     localStorage.setItem(AUTH_USER_KEY, JSON.stringify(data));
   }
 
-  static logout() {
+  logout() {
     localStorage.removeItem(AUTH_USER_KEY);
   }
 
   getUserList() {
     const registeredUsers = JSON.parse(localStorage.getItem(USERS_KEY));
-    console.log(registeredUsers);
 
     return registeredUsers ?? [];
+  }
+
+  getAuthUser() {
+    return JSON.parse(localStorage.getItem(AUTH_USER_KEY));
   }
 }
 

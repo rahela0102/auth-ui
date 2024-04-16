@@ -3,7 +3,7 @@ import { Router } from '@vaadin/router';
 import '@lion/ui/define/lion-form.js';
 import { loadDefaultFeedbackMessages } from '@lion/ui/validate-messages.js';
 import { Required } from '@lion/ui/form-core.js';
-import '../shared/submit-button/submit-buttont.js';
+import '../shared/submit-button/submit-button.js';
 import '../shared/input-email/input-email.js';
 import '../shared/input-text/input-text.js';
 import { authService } from '../../services/auth-service.js';

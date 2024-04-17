@@ -44,4 +44,13 @@ describe('auth service', () => {
       authService.login({ email: 'test2@tets.com', password: 'test' }),
     ).to.throw(Error, 'Incorrect credentials');
   });
+
+  it('logout user', () => {
+    authService.register(registrationData);
+    authService.logout();
+
+    expect(() => {
+      authService.getAuthUser().to.equal(null);
+    });
+  });
 });
